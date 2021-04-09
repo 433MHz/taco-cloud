@@ -1,7 +1,6 @@
 package tacos;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.fail;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -30,5 +29,4 @@ public class HomeControllerTest {
 		.andExpect(view().name("home"))
 		.andExpect((ResultMatcher)content().string(containsString("Witaj w...")));
 		}
-
 }
